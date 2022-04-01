@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.ds": true,
+    "**/.theia": true
+  },
+  "editor.autoSave": "on",
+  "terminal.integrated.shell.linux": "/bin/bash"
+}
