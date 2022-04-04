@@ -12,6 +12,7 @@
     "egg-oss": "^2.0.0",
     "egg-scripts": "^2.11.0",
     "egg-view-nunjucks": "^2.2.0",
+    "md5": "^2.3.0",
     "string-to-stream": "^3.0.1"
   },
   "devDependencies": {

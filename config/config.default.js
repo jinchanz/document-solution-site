@@ -2,6 +2,7 @@
 
 'use strict';
 const path = require('path');
+const { ossConfig, yuqueSecret } = require('./secret');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -12,6 +13,7 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = exports = {};
+  config.middleware = [ 'errorHandler' ];
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1586592205046_9870';
@@ -44,7 +46,7 @@ module.exports = appInfo => {
       lightColor: '#ffffff00',
       headerHeight: 60,
       blackColor: 'black',
-      token: '',
+      token: yuqueSecret.token,
       documents: {
         help: {
           baseUrl: 'https://www.yuque.com/api/v2',
@@ -93,11 +95,7 @@ module.exports = appInfo => {
 
   exports.oss = {
     client: {
-      accessKeyId: '',
-      accessKeySecret: '',
-      bucket: '',
-      endpoint: 'oss-cn-shenzhen.aliyuncs.com',
-      timeout: '60s',
+      ...ossConfig
     },
   };
 
