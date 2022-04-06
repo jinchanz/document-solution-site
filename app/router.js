@@ -26,4 +26,6 @@ module.exports = app => {
   router.post('/api/login', controller.admin.login);
 
   /** login end */
+
+  router.get('/api/v1/profile', needLogin, controller.user.profile);
 };
