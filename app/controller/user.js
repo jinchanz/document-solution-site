@@ -1,5 +1,4 @@
 'use strict';
-const stringToStream = require('string-to-stream');
 
 const Controller = require('egg').Controller;
 
