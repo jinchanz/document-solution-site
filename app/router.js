@@ -28,4 +28,12 @@ module.exports = app => {
   /** login end */
 
   router.get('/api/v1/profile', needLogin, controller.user.profile);
+
+  /** lowcode file start */
+  router.get('/api/v1/files', controller.file.listFile);
+  router.post('/api/v1/files', controller.file.createFile);
+  router.patch('/api/v1/files/:id', controller.file.updateFile);
+  router.delete('/api/v1/files/:id', controller.file.deleteFile);
+  /** lowcode file end */
+
 };
