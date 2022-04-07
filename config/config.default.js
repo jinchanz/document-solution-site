@@ -2,7 +2,7 @@
 
 'use strict';
 const path = require('path');
-const { ossConfig, yuqueSecret } = require('./secret');
+const { ossConfig, yuqueSecret, mysql } = require('./secret');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -93,10 +93,14 @@ module.exports = appInfo => {
     },
   };
 
-  exports.oss = {
+  config.oss = {
     client: {
-      ...ossConfig
+      ...ossConfig,
     },
+  };
+
+  config.sequelize = {
+    ...mysql,
   };
 
   return {

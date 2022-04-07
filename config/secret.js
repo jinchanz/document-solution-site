@@ -11,4 +11,12 @@ module.exports = {
   yuqueSecret: {
     token: '',
   },
+  mysql: {
+    dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
+    database: '',
+    host: '',
+    port: 3306,
+    username: '',
+    password: '',
+  },
 };
