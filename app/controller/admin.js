@@ -33,7 +33,23 @@ class AdminController extends Controller {
 
   async loginView() {
     const { ctx } = this;
-    ctx.redirect('/admin/preview.html?page=login');
+    const { redirectUrl = '/' } = ctx.request.query;
+    if (ctx.session.username) {
+      ctx.redirect(redirectUrl);
+      return;
+    }
+    await ctx.render('renderer.nj', {
+      data: {
+        schemaUrl: 'https://i.ablula.tech/portal/login.json',
+        fullScreen: true,
+      },
+    });
+  }
+
+  async logout() {
+    const { ctx } = this;
+    ctx.session = null;
+    ctx.redirect(ctx.get('referer') || '/');
   }
 
   async login() {

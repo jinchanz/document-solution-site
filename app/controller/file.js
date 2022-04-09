@@ -4,12 +4,21 @@ const Controller = require('egg').Controller;
 
 class AdminController extends Controller {
 
-  async listFile() {
+  async listFiles() {
     const { ctx } = this;
     const files = await ctx.service.file.listFile();
     ctx.body = {
       code: 0,
       data: files,
+    };
+  }
+  async getFile() {
+    const { ctx } = this;
+    const { id } = ctx.params;
+    const file = await ctx.service.file.getFileByPk(id);
+    ctx.body = {
+      code: 0,
+      data: file,
     };
   }
   async createFile() {

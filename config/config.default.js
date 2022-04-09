@@ -37,22 +37,23 @@ module.exports = appInfo => {
   // add your user config here
   const userConfig = {
     yuqueViewer: {
-      npm: '@ablula/document-client@0.2.9-beta.3',
+      npm: '@ablula/document-client@0.2.9-beta.4',
       onlyDoc: false,
       noHeader: false,
       showSearch: true,
       showEditor: true,
       darkMode: false,
       lightColor: '#ffffff00',
-      headerHeight: 60,
+      headerHeight: 48,
       blackColor: 'black',
       token: yuqueSecret.token,
+      title: '文档站点解决方案',
       documents: {
         help: {
           baseUrl: 'https://www.yuque.com/api/v2',
           namespace: 'mark.ck/ds',
           search: '/documents/search',
-          homepage: '/doc',
+          homepage: '',
           title: '文档体系解决方案',
           hideTitle: true,
           prefix: '/api/documents',
@@ -62,7 +63,7 @@ module.exports = appInfo => {
           baseUrl: 'https://www.yuque.com/api/v2',
           namespace: 'mark.ck/spec',
           search: '/spec/search',
-          homepage: '/doc',
+          homepage: '',
           title: '规范协议',
           hideTitle: true,
           prefix: '/api/spec',
@@ -70,6 +71,11 @@ module.exports = appInfo => {
         },
       },
       menuDataSource: [
+        {
+          label: '首页',
+          target: '_self',
+          url: '/',
+        },
         {
           label: '文档',
           target: '_self',

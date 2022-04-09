@@ -14,6 +14,9 @@ class FileService extends Service {
     const { ctx } = this;
     return this.File.findAll();
   }
+  async getFileByPk(id) {
+    return this.File.findByPk(id);
+  }
   async createFile(file) {
     const { ctx } = this;
     return this.File.create(file);

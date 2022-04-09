@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="https://alifd.alicdn.com/npm/@alilc/lowcode-engine@1.0.1/dist/css/engine-core.css" />
     <!-- 低代码引擎官方扩展的样式 -->
     <link rel="stylesheet" href="https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@1.0.2/dist/css/engine-ext.css" />
-
+    <style>
+      .lce-page {
+        height: 100vh;
+      }
+    </style>
     <!-- React，可替换为 production 包 -->
     <script src="https://g.alicdn.com/code/lib/react/16.13.1/umd/react.production.min.js"></script>
     <!-- React DOM，可替换为 production 包 -->
