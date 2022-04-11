@@ -24,7 +24,7 @@ class HomeController extends Controller {
 
     await ctx.render('renderer.nj', {
       data: {
-        schemaUrl: 'https://i.ablula.tech/portal/schema.json',
+        schemaUrl: 'https://i.ablula.tech/portal/home.json',
         menuDataSource,
         darkMode,
         headerHeight,

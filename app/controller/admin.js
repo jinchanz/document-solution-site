@@ -25,7 +25,7 @@ class AdminController extends Controller {
   async saveSchema() {
     const { ctx } = this;
     const { page = 'home', schema } = ctx.request.body;
-    const filename = page === 'home' ? 'schema.json' : 'login.json';
+    const filename = `${page}.json`;
     ctx.response.set('Access-Control-Allow-Origin', '*');
     const res = await ctx.oss.putStream(`portal/${filename}`, stringToStream(JSON.stringify(schema)));
     ctx.body = res || 'ok';
