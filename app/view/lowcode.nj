@@ -19,6 +19,7 @@
         height: 100vh;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <!-- React，可替换为 production 包 -->
     <script src="https://g.alicdn.com/code/lib/react/16.13.1/umd/react.production.min.js"></script>
     <!-- React DOM，可替换为 production 包 -->
